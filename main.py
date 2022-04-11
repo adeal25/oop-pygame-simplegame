@@ -10,19 +10,22 @@ pygame.init()
 
 scene = Scene((640, 480))
 scene.setup_level(
-  Level1(),
-  Level2()
+    Level1(),
+    Level2()
 )
 
 player = Player(scene.screen)
-player.set_weapon(Arrow())
+# player.set_weapon(Arrow())
+# player.set_weapon(Ball())
+# player.set_weapon(Snipe())
+player.set_weapon(Spear())
 game_controller = GameController(player)
 
 running = True
 
 while(running):
-  scene.fill()
-  game_controller.keyboard_event()
-  game_controller.mouse_position_event()
-  player.draw()
-  pygame.display.flip()
+    scene.fill()
+    game_controller.keyboard_event()
+    game_controller.mouse_position_event()
+    player.draw()
+    pygame.display.flip()
