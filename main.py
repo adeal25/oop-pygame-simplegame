@@ -21,6 +21,8 @@ player = Player(scene.screen)
 player.set_weapon(Spear())
 game_controller = GameController(player)
 
+scene.next_level();
+
 running = True
 
 while(running):
