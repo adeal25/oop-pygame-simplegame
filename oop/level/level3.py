@@ -1,7 +1,7 @@
 import pygame
 
 class Level3():
-    ''' Level 1 - berlatar belakang angkasa '''
+    ''' Level 3 - berlatar belakang angkasa '''
 
     def setup(self, screen, resolution):
         print(resolution)
