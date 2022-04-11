@@ -63,3 +63,65 @@ class Arrow(Bullet):
 
 	def hit_enemy(self, enemies):
 		pass
+
+
+class Ball(Bullet):
+	max_bullet = 30
+
+	def __init__(self):
+		Bullet.__init__(self, Arrow.max_bullet)
+
+	def tiles(self):
+		return pygame.image.load('resources/images/fireball.png')
+
+	def shoot_sound(self):
+		tmp = pygame.mixer.Sound("resources/audio/bush.wav")
+		tmp.set_volume(0.05)
+		return tmp
+
+	def hit_enemy_sound(self):
+		pass
+
+	def hit_enemy(self, enemies):
+		pass
+
+class Snipe(Bullet):
+	max_bullet = 10
+
+	def __init__(self):
+		Bullet.__init__(self, Arrow.max_bullet)
+
+	def tiles(self):
+		return pygame.image.load('resources/images/snipe.png')
+
+	def shoot_sound(self):
+		tmp = pygame.mixer.Sound("resources/audio/dor.wav")
+		tmp.set_volume(0.05)
+		return tmp
+
+	def hit_enemy_sound(self):
+		pass
+
+	def hit_enemy(self, enemies):
+		pass
+
+
+class Spear(Bullet):
+	max_bullet = 3
+
+	def __init__(self):
+		Bullet.__init__(self, Arrow.max_bullet)
+
+	def tiles(self):
+		return pygame.image.load('resources/images/spear.png')
+
+	def shoot_sound(self):
+		tmp = pygame.mixer.Sound("resources/audio/jleb.wav")
+		tmp.set_volume(0.05)
+		return tmp
+
+	def hit_enemy_sound(self):
+		pass
+
+	def hit_enemy(self, enemies):
+		pass
